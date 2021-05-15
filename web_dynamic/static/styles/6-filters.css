@@ -36,10 +36,15 @@ button:hover {
     font-weight: 600;
 }
 .filters h4 {
+    white-space: nowrap;
+    width: 75%;
+    height: 16px;
     margin-left: 15%;
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .locations {
     height: 100%;
@@ -60,7 +65,7 @@ button:hover {
     padding-bottom: 15px;
     height: 300px;
     overflow-y: scroll;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
     max-height: 300px;
 }
 
