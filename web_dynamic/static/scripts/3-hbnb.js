@@ -6,7 +6,8 @@ $(document).ready(function () {
     else {
       $('#api_status').removeClass('available');
     }
-  })
+  });
+  
   const checkedAmenities = {};
   $(document).on('change', "input[type='checkbox']", function () {
     if (this.checked) {
@@ -21,6 +22,7 @@ $(document).ready(function () {
       $('div.amenities > h4').text(Object.values(checkedAmenities).join(', '));
     }
   });
+
   $.ajax({
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
     type: 'POST',
@@ -60,4 +62,5 @@ $(document).ready(function () {
       }));
     }
   });
+
 });
