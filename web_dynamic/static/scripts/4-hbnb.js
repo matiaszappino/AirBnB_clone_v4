@@ -24,7 +24,7 @@ $(document).ready(function () {
     $.ajax({
       url: 'http://0.0.0.0:5001/api/v1/places_search/',
       type: 'POST',
-      data: checkedAmenities,
+      data: JSON.stringify(checkedAmenities),
       contentType: 'application/json',
       dataType: 'json',
       success: function (data) {
